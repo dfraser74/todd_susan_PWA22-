@@ -1,0 +1,225 @@
+/*
+ Susan Todd
+ 5-5-2014
+ PWA-2
+ */
+ /*Colors
+
+lt slate-- gray#708090
+dk grey-- #A9a9a9
+lt blue--#add8e6
+lt steel blue--#b0c4de
+wht smoke-#f5f5f5
+
+
+olive-grey-background-color-#ABA597
+base white-#edf2ee
+lt taupe-#B4A085
+taupe- #87765A
+chocolate brown #45341b
+drk taupe-#160606
+green hover-#A1AC60  
+lt rust hover-#f49440
+rust-CTA-#CC6633
+drk rust -#CC6633
+
+drk olive-#003300 
+
+ */
+ /***********body****************/
+ /*center the web page*/
+#wrapper {
+	    margin: 0 auto;
+	    width: 960px;
+	}
+#content {
+	    width: 100%;
+	}
+body{ 
+	margin:2em;
+
+	background-color: #ABA597;//olive-grey
+	font-family:     Verdana, Arial, sans-serif;
+	font-size:        1em;
+	color :  #45341b;       ;//chocolate
+	}
+
+
+	
+/*Header*/
+header{
+	width:960px;
+}	
+#nav{
+	background:url(images/nav_bar.png);
+	background-size: 100%, 100%;
+	background-repeat:no-repeat;
+}
+/*inputs, buttons*/
+.userid{
+	width:760px;
+	float:left;/*userid coosponds to the logoutbox below*/
+}
+.logoutbox{
+	width:960px;
+	float:right;
+}
+
+/*code for tool tip pop up*/
+.tooltip{
+	/*max-width:200px;*/
+	display:none;
+	position:absolute;/**/
+	border: 1px solid #333;
+	background-color:#000;/*black*/
+	border-radius: 5px;  /*round edges*/
+	padding:10px;
+	color:#FFF;
+	font-size:12px Arial;
+}
+
+/*Tabs- for accrodian*/
+.mytabs{
+	width:760px;
+	background-color: #CCC;    /*black*/
+	padding: 10px;
+}
+
+.tabs li{ 
+	list-style:none;/*no bullets*/
+	display:inline;/*makes the lists didsplay inline*/
+
+}
+
+.tabs a{/* these are the anchors on the tabs*/
+	padding:5px 10px;
+
+	/*display:inline-block; */   /*should make tabs be inline and block style*/
+	display:inline-block;
+	color:#FB0404;/*red*/
+	text-decoration: none;
+	background-color:#666;    /*grey*/
+
+}
+
+.tabs a.active{
+	
+	color:#FB0404;/*red*/
+	background-color:#FFF; /*change background to white when tab is active*/ 
+} 
+
+/*-------Links-----------------------*/
+a:link { 
+	
+		text-decoration:underline;
+		text-decoration:none;
+		color: #003300  ;
+}/*unvisited link*/	
+
+a:hover { color: #AFF704D  ;}/*lt green HOVER link*/
+a:visited { color: #CC6633;  }/*drk rust isited link*/
+
+/*_____headings-----------------------*/
+h1{color:#45341b        ;}
+h3 {
+	
+	color:  #54780e ;//green
+	/*font-size: 4em;*/ ;
+  }
+ h2{
+ 	color:#54780e;//green
+ 	//color:#cb7f28;//orange
+ } 
+
+#cta{
+
+	color:#cb7000;/*call to action orange*/
+} 
+#cta h2{
+	color:#cb7000;/*call to action orange*/
+} 
+p{ 
+  	word-wrap:break-word;
+}
+/*-------buttons-----------------------*/
+
+#login{
+	float:right;
+}
+
+#submit{
+	margin: 5px;
+	font-weight: bold;
+	color:#CC6633;
+	float:right;
+}
+
+/*-------modal-----------------------*/
+#overlay{
+	width: 100%;/*covers whole page*/
+	height:100%;
+	background:rgba(0,0,0,.5);
+	position:absolute;/**/
+	top:0;
+	left:0;
+	z-index:1000;/* bring to top of pg*/
+	display:none;
+}
+
+#modal{
+	width: 350;
+	background:#CCC;
+	box-shadow: 0 0 10px #000;
+	border-radius: 10px;/*round cornners*/
+	position:relative;/**/
+	overflow:hidden;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left: -200px; 
+	z-index:1001;/*ipx over the top of the overlay */
+	display:none;
+}
+#modal .header{
+	background-color: #333;
+	color:#FFF;
+	padding:10px;
+}
+#modal p{
+	margin:15px;
+}
+#modal .close{
+	position: absolute;
+	right:5px;
+	top:5px;
+	font-size: 16px;
+	font-weight: bold;
+	padding: 5px 10px;
+	border: 1px solid #CCC;
+	cursor: pointer;
+	background-color: #F00;
+}
+form{
+	padding:10px;
+}
+form input{
+	padding:10px;	
+}
+
+.mystatus > input[type=radio]{
+	display: none;
+}
+.input[type=radio] + img {
+	cursor:pointer;
+	border: 2px solid transparent;
+}
+input[type=radio]:checked + img{
+	border:2px solid #F00;
+}
+
+
+
+
+
+
+

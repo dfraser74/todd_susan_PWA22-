@@ -1,0 +1,131 @@
+<!--Susan Todd 5-5-2014,Project Management  App, PWA-2 -->
+
+ <!doctype html>  
+
+<!--
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>My App| Registration Page</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	
+</head>
+
+<body>
+	<div class="container">
+    
+
+		<h1>Registration Page...</h1>
+		<p>Start contecting with faculty from other schools.</p>
+
+
+	<div id="reg">
+
+
+		<form id="register"><!--create form below-->
+			<label>First Name:</label>
+			<br>
+			<input id="first" 
+			       type="text" 
+			       name="first-name" 
+			       class="masterTooltip" 
+				   title="enter name"
+			       placeholder="Enter your First Name">
+			<br>
+
+			<label>Last Name:</label>
+			<br>
+			<input id="last" 
+				   type="text" 
+				   name="last-name" 
+				   class="masterTooltip" 
+				   title="enter name"
+				   placeholder="Enter your Last Name" 
+				   required>  
+			<br>
+
+
+			<label>User Name:</label>
+			<br>
+			<input id="userName" 
+				   type="text" 
+				   name="user-name" 
+				   class="masterTooltip" 
+				   title="choose a username"
+				   placeholder="Enter your User Name">
+			<br>
+
+
+			<label>Email Address:</label>
+			<br>
+			<input id="email"  
+				   name="email" 
+				   class="masterTooltip" 
+				   title="enter email address"
+				   placeholder="Enter your Email Address" required>
+			<br>
+
+
+			<label>Password:</label>
+			<br>
+			<input id="password"  
+			       name="password" 
+			       placeholder="Enter your password" required>
+			<br>
+<!---
+			<label>Password:</label>
+			<br>
+			<input id="pass-confirm"  
+			       name="pass-confirm" 
+			       placeholder="Confirm your password" required>
+
+-->
+
+			<br>
+			
+		</form>
+
+		    <input name="submitbtn" 
+		           type="button" 
+		           id="register" 
+		           value="Submit"/><!--submit btn-->
+		
+	</div><!--close reg div-->
+	
+	</div><!--add close containter-->
+
+	<!-- jquery --><!--using google apis -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<!-- plugins -->
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

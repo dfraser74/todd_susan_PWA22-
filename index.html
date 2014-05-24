@@ -1,0 +1,142 @@
+ <!--Susan Todd 5-5-2014,Project Management  App, PWA-2 -->
+
+ <!doctype html>  
+
+<!--
+	The only html element in the body is the container div
+	Your code should load your page templates into the container
+-->
+
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>My App|Home|Login</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- CSS concatenated and minified via ant build script-->
+	<link rel="stylesheet" href="css/style.css?v=1">
+	<!-- end CSS-->
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id=#content>
+		<nav>
+
+
+	
+
+		<!--<img src="images/logo1.png"  width="100" height="100" alt="Logo of company">-->
+		<img src="images/nav_bar.png"  width="960" height="90" alt="Logo of company">
+
+	<div id="login"><!--login mod-->
+
+		<h3>Sign In To Access Site</h3>
+
+		<form id="login"><!--can use id only 1x on a page, class can be used multiple times
+			<label>Username:</label>
+			<!--the tooltip is being contorled by the js file which ref the css file-->
+
+			<label>Username:</label>
+			<input name="signInButton" 
+					type="text"
+					class="masterTooltip" 
+				    title="Enter username"
+					id="user"
+					required/>
+					<br>	
+					<br>
+
+			<label>Password :</label>
+			<input  name="signInButton"
+					class="masterTooltip"
+					title="Enter password"
+					type="password" 
+					id="pass"
+					required/>
+					<br>	
+					<br>
+			<!---sign in button---->
+			<input name="signInButton" 
+				   type="button" 
+				   id="signInButton" 
+				   value="Sign In"><!--this may be a small s -->
+		</form>
+	</div><!--close login-->
+
+	</nav><!--close nav bar-->
+
+
+
+	<h1>Welcome...</h1>
+	<h3>Project Mangement Application</h3>
+	<p>It's time to take control of Your 
+		Time with Our Project Management System. 
+		No more lost project notes! Record  all of your valuable notes in one place.
+		Access from home or office. Let us help you teach more efficaantly!</p>
+	
+
+	<div id="cta"><!--call to action-->
+
+		<h2>Join Now!</h2>
+		<h3>Special Offer</h3>
+		<p>Join Now and get a 15% percent discount! Limited Time Offer! Try for 30 days for FREE! </p>
+
+		<input name="regbtn" 
+		       type="button" 
+		       id="signUp" 
+		       value="Sign Up" 
+		       class="mastertooltip" 
+		       title="Join Today!"/><!--this may be a small s -->
+	</div><!--close cta-->	
+
+	<div>
+	   <h2>Note:</h2>
+	   <p>No links on this page except for sign in and call to action. </p>
+	   <ul>
+	   		<li>figure out how to center page</li>
+	   		<li>figure out how to make background image work in nav bar, 2 images</li>
+	   		<li>figure out how to make buttons orange</li>
+	   		<li>figure out how to </li>
+
+	   </ul>
+	</div><!--close Note div-->
+
+
+	<div id="tooltipbox"/>student</div>
+
+
+</div><!--close content-->
+</div><!--close wrapper-->
+
+	<!-- jquery --><!--script tags go in this area-->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<!-- plugins -->
+	
+	<!-- main -->
+	<script type="text/javascript" src="js/main.js"></script>
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
