@@ -1,5 +1,5 @@
 <!--Susan Todd 5-13-2014,Projects App, PWA-2 -->
- <!--created new pag in week 2-->
+ <!--created new pag in week 2 projects.html-->
 
 <!doctype html>  
 
@@ -27,12 +27,16 @@
 	<!-- end CSS-->
 	
 </head>
-
+<div id="wrapper">
 <body>
 <header>
+	<h1>G-Corp</h1>
+	<div id="nav">
+	</div>
+</header><!--close header-->
 
+<aside>
 	<div class="userid">Welcome User:</div><!--close div-->
-
 
 	<div class="logoutbox">
 	   	<input name="logOut"
@@ -43,10 +47,6 @@
 	   	       value="Sign Out"/>   
 	</div><!--close div-->
 
-</header><!--close header-->
-
-	<br>
-	<br>
 
 	<!--link to dashboard/admin page-->
 	<p><input name="dashboardButton" 
@@ -56,25 +56,32 @@
 			  id="dashboardButton" 
 			  value="Dashboard" />
 	</p>	
+	</aside>
+
 
 	<div class="welcome">
 
-	<p>Add your projects by clicking on plus sign. 
-		Add a graphic here of a  + sign here</p>
+	<p>Click Button to make a new procject.</p>
 
 		<!--add modal window here-->
-	<p> <a href="#" class="modalClick"> Add + </a> </p><!--corrected href #-->
+	 <p><a href="#" class="modalClick"><img src="images/add_this.png"  width="45" height="45" border="0"  alt="Logo of company"></a></p> <!--corrected href #-->
 
+	
 	</div><!--close welcome div-->
 
+
 	<br>
 	<br>
+
 
 	<div id="projectlist">
 
-	<h1>Current Projects</h1>
-	<div class="projects"></div>
+	  <h2>Current Projects</h2>
 
+	</div><!--close projectlist div-->
+	  
+	<div class="projects"></div>
+		<!--projects will be placed in this empty div-->
 	</div><!--close projectlists-->
 
 
@@ -110,13 +117,11 @@
 			       <br>
 					 <br>
 
-
-			 <!----status of project-->      
+	<!--status of project-->      
      
 			<label name="status"> Select Project Status </label>
 			<br>
 			
-
 			<!--images for status-->
 			<label class="mystatus">
 				<input type="radio"
@@ -127,7 +132,6 @@
 				   <img src="images/coffee3.png" width="69" hight="75"/>
 			</label>
 
-
 			<label class="mystatus">
 				<input type="radio"
 				       name="status"
@@ -137,14 +141,12 @@
 				   <img src="images/coffee3.png" width="69" hight="75"/>
 			</label>
 
-
 			<label class="mystatus">
 				<input type="radio"
 				       name="status" 
 				       id="delayed"  >
 				 <img src="images/coffee3.png" width="69" hight="75"/>
 			</label>
-
 
 			<label class="mystatus">
 				<input type="radio"
@@ -154,23 +156,23 @@
 			</label>
 	<br>
 	<br>
-
-
-			<!-- addButton-===================add the project to the projects page-->
+	<!-- addButton-===================add the project to the projects page-->
 	 		<input name="addButton" 
 			       type="button" 
 			       id="addButton" 
 			       value="Add" /><!--submit btn-->
 
-
-
-	</form>	
+	</form>	<!--close form-->
 	</div><!--close reg div-->
 
-</div>
+<!--close this div and move up</div>-->
 </div><!--need to close the modal & overlay divs-->
 
 
+
+
+
+</div><!--close wrapper-->	
 
 	<!-- jquery --><!--using google apis -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

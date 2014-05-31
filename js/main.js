@@ -54,6 +54,7 @@ PWA-2
 			dataType:"json",
 			data:{
 
+				//php  : html
 				username: user,
 				password: pass
 
@@ -65,6 +66,8 @@ PWA-2
 				if(response.error){
 					alert(response.error);
 				}else{
+
+					//window loaction is where user will be taken when logged in
 					window.location.assign('admin.html');
 				};//close else		
 
@@ -76,11 +79,16 @@ PWA-2
 	
 	/*==========Register=========================*/	
 	//set up the reg fields w/variables to get the val()
-	$("#register").on("click",function() {
-		var firstname= $("#first").val();//id="first" 
-		var lastname= $("#last").val();//id="last" 
-		var username= $("#userName").val();//id="userName" 
-		var email= $("#email").val();//id="email"  
+	//changed the name of the register button to submit as it makes more sense to me, also there was a conflict with id names
+	$("#submit").on("click",function() {
+
+		//edited the var names to match the names in the html 
+			//nameing convention
+			//anything u want | html 
+		var first=   $("#first").val();//id="first" 
+		var last=    $("#last").val();//id="last" 
+		var userName= $("#userName").val();//id="userName" 
+		var email=    $("#email").val();//id="email"  
 		var password= $("#password").val();//id="password"  
 
 		$.ajax({
@@ -90,8 +98,13 @@ PWA-2
 			dataType: "json",
 			data:{
 
-				 firstname: firstname,
-				 lastname:  lastname,
+				//just making notes as to what needs to match and where when sending and returning data	
+				//once I made these changes the register page worked
+				//a pop for errors or duplicate names will occur if user name or e-mail is the same
+
+				// php names   :  html names
+				 firstname: first,
+				 lastname:  last,
 				 username:  userName,
 				 email:     email,
 				 password:  password
@@ -104,7 +117,8 @@ PWA-2
 
 				if(response.error){
 
-					alert(response.error)
+					alert(response.error);
+
 				}else{
 					//when registration is complete , user is taken to index page to sign in 
 					window.location.assign("index.html");
@@ -115,13 +129,15 @@ PWA-2
 	});//close ajax fn
 
 	});//close register btn
-	/*==========Link to Projects , Tasks, Users page from the admin page============*/
+	/*==========Link to Projects , Tasks,  Buttons ============*/
+
 	$(".projectsbtn").on("click", function(e){
 		//class="projectsbtn" >
 		e.preventDefault();
 
 		window.location.assign("projects.html");
 	});	//<button class="projectsbtn" > <a href="projects.html">Projects</a> </button></p>
+
 
 	$(".taskbtn").on("click", function(e){
 		//class="taskbtn" >
@@ -130,13 +146,15 @@ PWA-2
 		window.location.assign("tasks.html");
 	});//	"tasksbtn" 
 
+
 	$(".usersbtn").on("click", function(e){
 
 		//class="usersbtn" >
 		e.preventDefault();
 
 		window.location.assign("users.html");
-	});//	"usersbtn"
+	});//	
+
 
 	$("#logOut").on("click", function(e){
 		//id="logOut"
@@ -144,10 +162,9 @@ PWA-2
 		e.preventDefault();
 
 		window.location.assign("index.html");
-	});//	"usersbtn"
+	});//	
 
 		
-
 	$("#signUp").on("click", function(e){
 		//id="signUp" 
 		
@@ -163,27 +180,28 @@ PWA-2
 	$(".modalClick").on("click", function(e){
 
 		 e.preventDefault();
-
+		 			//overlay will fade in, then find the modal id and fadeIn Modal
 		 $("#overlay").fadeIn()
 					  .find("#modal")
 		              .fadeIn();
 	});	//close .modalClick
 
+			//close the modal and overlay fn
 	$(".close").on("click", function(e){
 
-		 e.preventDefault();						//modal working now
-
+		 e.preventDefault();						
+		 		//fadeOut he overlay, then find the modal , and fadeOut the modal
 		 $("#overlay").fadeOut()
 		              .find("#modal")
 		              .fadeOut();//fade the modal out
 	});//close  .close fn
 
 	/*==========fade status btn====================*/	
-	//use the timing to fade
+
 	$(".mystatus").mouseover(function()  {
 
 		$(this).fadeTo(100 ,.3);//fadeTo 100 ,.3 transparency
-
+							//use the timing to fade
 
 	} );//close .mystatus
 
@@ -196,14 +214,14 @@ PWA-2
 
 	} );//close .mystatus
 
-	/*==========add the projects page==============*/	
+	/*==========add the projects page button==============*/	
 
-	//add a project on the modal panel
+	//+ sign on the modal panel, dont confuse with the add.html btn
    $("#addButton").on("click", function(e){
    	//  id="addButton" 
 		e.preventDefault();
 
-		window.location.assign("add.html");////what is this window location since it is the modal
+		window.location.assign("add.html");//go to new page add.html
     })
 
    //take user from project page back to the dashboard/admin page
@@ -212,17 +230,19 @@ PWA-2
 
 		e.preventDefault();
 
-		window.location.assign("admin.html");
+		window.location.assign("admin.html");//go from projects.html back to dashboard
     });
 
  /*+++++++++++++++Add Projects Page++++++++++++++++++++++++*/ 
+
+ // add a project
 $("#addBtn").on("click", function(e)  {
 //id="addBtn"
 	e.preventDefault();
-
+								// this needed to be seperated by commas not semicolons
 	var projName = $("#projectName").val(),
-		projDesc = $("#projectDescription").val();
-		projDue = $("#projectDueDate").val();
+		projDesc = $("#projectDescription").val(),
+		projDue = $("#projectDueDate").val(),
 		status = $("#projectStatus").val();
 
 
@@ -233,11 +253,11 @@ $("#addBtn").on("click", function(e)  {
 			dataType:"json",
 			data:{
 
-				//matches database name, cannot change
+		   //matches php,  var name which matches the html
 			projectName:	    projName,
 			projectDescription:	projDesc,
 			dueDate:	        projDue,
-			projectStatus:	    status
+			status:	            status
 
 		},
 		success:function(response){
@@ -249,7 +269,7 @@ $("#addBtn").on("click", function(e)  {
 				alert(response.error);
 
 			}else{
-
+						//take user to the projects page 
 				window.location.assign("projects.html");
 
 			};
@@ -258,35 +278,107 @@ $("#addBtn").on("click", function(e)  {
 	});
 
 } );//close add project fn
-/*===========Accordian for Projects Page=============*/
+/*============Add the Projects to the Projects page=========*/
+var projects = function(){
+
+	$.ajax({
+
+		url:"xhr/get_projects.php",
+		type: "get",
+		dataType: "json",
+
+		success:function(response){
+
+			if(response){
+
+				console.log(response);	
+
+			}else{
+
+				for(var i=0; j=response.projects.length, i<j ; i++ ){
+
+					var result = response.projects[i];
+
+			
+
+
+						//append the box for the projects to the projects div
+				$(".projects").append('<div style="border:1px solid #000 ">' + 
+					//<div class="projects"></div>
+
+									//result.id is the reuslt with the id info
+					"Project ID:" + result.id + "<br>"  +
+
+					"Project Name:" + result.projectName + "<br>"  +
+
+					"Project Description:" + result.projectDescription + "<br>" +
+
+						//inserting a button to delete the project
+					'<button class="deleteBtn" >Delete</button>'  + 
+
+						//inserting a btn to edit project
+					'<button class="editBtn">Edit</button>' +
+
+
+						//close the div and add a line break
+				
+			        "</div>"	);//close the append method
+				
+					}//end else
+
+			}//end loop
+
+		}//end success
+
+	})//end ajax
+
+}//end project fn
+
+
+
+
+
+
+
+
+
+
+
+
+/*===========Accordian for Admin/Dashboard Page=============*/
 
      //<div class="mytabs">
      //<ul class="tabs">
 
 
   $("ul .tabs").each(function() {
-	//keeping trak of the active tab
-	// context of $(this) = $active  //find anchors
+	//keeping track of the active tab
+	//context of $(this) = $active  //find anchors
 	var $active , $content , $links = $(this).find ("a");
 
     //if location.hash matches one of the links then make it active
     //if not then use the first tab as the active tab
 
-    //we will hide teh content tabs thtat are not non-active           //setting tabs at index 0
-    $active = $($links.filter (  '[href= " '+location.hash+' " ]' ) [0]   ||    $links[0] );
+    //we will hide the content tabs thtat are not non-active           //setting tabs at index 0
+    			//I think this is where I am having the issue particulary with the apostrophes
+    			//I moved the [0] to be inside the parenthesis but I dont fully understand where to put the parenthesis
+
+    //$active = $($links.filter (  '[ href= " + 'location[0].hash ' + " ]' )    ||  (  $links[0] )        );
+
+    $active = $($links.filter (  '[href= " '+location.hash+' " ]' ) [0] || $links[0] );
 
     $active.addClass('active');//adding class .active
 
-    $content=$($active[0].hash);
+    $content = $($active[0].hash);
 
 
     //hide non-active info from other 2 tabs
-    $links.not($active).each(function()  { 
+    $links.not($active).each(function(){ 
 
+    	//this anochor hide it
 	   $(this.hash).hide();
 
     });//close links not active
-
 
      //Bind this to  a click event
 	$(this).on("click", "a" , function(e){
@@ -296,14 +388,14 @@ $("#addBtn").on("click", function(e)  {
 	   $content.hide();
 
        //updating tabs w/ active class 
-	   $active=$(this);
-	   $content=$(this.hash);
+	   $active = $(this);
+	   $content = $(this.hash);
 
-       //make tab active
+       //make tab active and show the content
 	   $active.addClass("active");
 	   $content.show();
 
-	   //prevent anchor bubbling actions
+	   //prevent anchor defaault click action
 	   e.preventDefault();
  
 	});//close click event
@@ -311,7 +403,9 @@ $("#addBtn").on("click", function(e)  {
 });//close tabs 
 
 /*=========Display User================*/
-	/*==========Template user id===================*/	
+/*==========Template user id===================*/
+//get the user id to dispaly in the page
+
 		
 
 })(jQuery); // end private scope

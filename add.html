@@ -1,4 +1,4 @@
- <!--Susan Todd 5-5-2014,Project Management  App, PWA-2 -->
+ <!--Susan Todd 5-5-2014,Project Management  App, PWA-2  | add.html -->
 
  <!doctype html>  
 
@@ -27,18 +27,29 @@
 	<!-- end CSS-->
 	
 </head>
-
+<div id="wrapper">
 <body>
-	<div id="wrapper">
-		<div id=#content>
-		<nav>
+<header>
+	<h1>G-Corp</h1>
+	<div id="nav">
+	</div>
+</header><!--close header-->
 
 
-	
+<aside>
+	<div class="userid">Welcome User:</div><!--close div-->
 
-		<!--<img src="images/logo1.png"  width="100" height="100" alt="Logo of company">-->
-		<img src="images/nav_bar.png"  width="960" height="90" alt="Logo of company">
+	<div class="logoutbox">
+	   	<input name="logOut"
+	   		   class="masterTooltip" 
+			   title="click to log out"
+	   		   type="button"
+	   		   id="logOut"
+	   	       value="Sign Out"/>   
+	</div><!--close div-->
 
+
+	<!--link to dashboard/admin page-->
 	<p><input name="dashboardButton" 
 			  type="button" 
 			  class="masterTooltip" 
@@ -46,9 +57,13 @@
 			  id="dashboardButton" 
 			  value="Dashboard" />
 	</p>	
+</aside>
 
+<div id="content">
+	
 
-	<h1>Add Project...</h1>
+	<h2>Add Project...</h2>
+
 	<div id="add">
     
 			<form id="addForm">
@@ -73,7 +88,7 @@
 				<label>Project Status:</label>
 				<input name="projectStatus" 
 						type="text"
-						id="projectDueDate"/><br>
+						id="projectStatus"/><br>
 
 
 				<input name="addBtn" 
@@ -81,12 +96,10 @@
 						id="addBtn"
 						value="Add"/><br>
 
-
-
-
-
+	</div><!--close add-->					
 </div><!--close content-->
 </div><!--close wrapper-->
+
 
 	<!-- jquery --><!--script tags go in this area-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>

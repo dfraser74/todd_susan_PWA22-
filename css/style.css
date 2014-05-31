@@ -2,6 +2,7 @@
  Susan Todd
  5-5-2014
  PWA-2
+ style.css
  */
  /*Colors
 
@@ -28,41 +29,59 @@ drk olive-#003300
  */
  /***********body****************/
  /*center the web page*/
-#wrapper {
-	    margin: 0 auto;
-	    width: 960px;
-	}
-#content {
-	    width: 100%;
-	}
+/*center the pg*/
+#wrapper{
+		width:960px;
+	    margin:0 auto;	 
+}
+
 body{ 
-	margin:2em;
-
-	background-color: #ABA597;//olive-grey
-	font-family:     Verdana, Arial, sans-serif;
-	font-size:        1em;
-	color :  #45341b;       ;//chocolate
-	}
-
-
 	
+	background-color: #ABA597;//olive-grey
+	font-family: Verdana, Arial, sans-serif;
+	font-size:1em;
+	color: #45341b;/*chocolate*/
+}
 /*Header*/
 header{
+	background-color:#45341b;/*chocolate*/
+	background-image: url("../images/logo1.png");
+	background-repeat: no-repeat;
+	background-position: bottom margin-left;
 	width:960px;
-}	
+	height:170px;
+	
+	/*background-repeat:no-repeat;*/
+	/*background-color:#45341b ;/*chocolate*/
+}
+#content{
+	    width: 100%;
+	
+}	    	
 #nav{
-	background:url(images/nav_bar.png);
-	background-size: 100%, 100%;
-	background-repeat:no-repeat;
+	width:960px;
+	height:170px;
+	
 }
 /*inputs, buttons*/
+
+aside{
+	
+	 width: 150px;
+     font-size: 13px;
+     padding: 1px 1px 1px;
+     float:right;
+    
+ }   
+
 .userid{
 	width:760px;
+
 	float:left;/*userid coosponds to the logoutbox below*/
 }
 .logoutbox{
 	width:960px;
-	float:right;
+	float:left;
 }
 
 /*code for tool tip pop up*/
@@ -81,55 +100,56 @@ header{
 /*Tabs- for accrodian*/
 .mytabs{
 	width:760px;
-	background-color: #CCC;    /*black*/
-	padding: 10px;
+	background-color:#CCC; /*grey*/
+	padding:20px;
 }
 
 .tabs li{ 
 	list-style:none;/*no bullets*/
 	display:inline;/*makes the lists didsplay inline*/
-
 }
 
 .tabs a{/* these are the anchors on the tabs*/
 	padding:5px 10px;
-
-	/*display:inline-block; */   /*should make tabs be inline and block style*/
+	 /*should make tabs be inline and block style*/
 	display:inline-block;
-	color:#FB0404;/*red*/
+	background-color:#666;/*grey*/
+	color:#FFF;/*shite*/
 	text-decoration: none;
-	background-color:#666;    /*grey*/
-
 }
 
 .tabs a.active{
-	
-	color:#FB0404;/*red*/
 	background-color:#FFF; /*change background to white when tab is active*/ 
+	color:#000;/*black*/
+	
 } 
 
-/*-------Links-----------------------*/
-a:link { 
-	
-		text-decoration:underline;
-		text-decoration:none;
-		color: #003300  ;
-}/*unvisited link*/	
-
-a:hover { color: #AFF704D  ;}/*lt green HOVER link*/
-a:visited { color: #CC6633;  }/*drk rust isited link*/
+/*-------Links-----------------------
 
 /*_____headings-----------------------*/
-h1{color:#45341b        ;}
-h3 {
-	
-	color:  #54780e ;//green
-	/*font-size: 4em;*/ ;
-  }
- h2{
- 	color:#54780e;//green
- 	//color:#cb7f28;//orange
- } 
+h1{color:#FFF;}/*white*/
+
+h2{
+	color:#45341b;/*chocolate brown*/
+	/*font-size: 4em ;*/
+ }
+h3{
+ 	color:#54780e;/*green*/
+ 	/*color:#cb7f28;orange*/
+} 
+.green{
+		color:#54780e;/*green*/
+
+}
+span{
+	color:#cb7f28;
+	font-weight: bolder;
+}
+h4{color:#cb7f28;}/*orange*/
+p{ 
+  	word-wrap:break-word;
+}
+/*-----CTA--------------------------*/
 
 #cta{
 
@@ -138,20 +158,33 @@ h3 {
 #cta h2{
 	color:#cb7000;/*call to action orange*/
 } 
-p{ 
-  	word-wrap:break-word;
-}
+
 /*-------buttons-----------------------*/
 
 #login{
 	float:right;
+	font-weight: bolder;
 }
 
 #submit{
 	margin: 5px;
-	font-weight: bold;
-	color:#CC6633;
+	font-weight: bolder;
+	color:#CC6633;/*orange*/
+	
+}
+#reg{
+	display:inline-block;
 	float:right;
+}
+#col1{
+	display:block;
+	display:left;
+}
+#col2{
+	display:block;
+	float:right;
+	
+	
 }
 
 /*-------modal-----------------------*/
@@ -167,7 +200,7 @@ p{
 }
 
 #modal{
-	width: 350;
+	width: 350px; /*forgot the px on htis line and it made the modal not have a right side*/
 	background:#CCC;
 	box-shadow: 0 0 10px #000;
 	border-radius: 10px;/*round cornners*/
