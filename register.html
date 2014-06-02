@@ -21,60 +21,82 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- CSS concatenated and minified via ant build script-->
+	<!--custom css loaded first-->
+	<link rel="stylesheet" href="css/trontastic/jquery-ui-1.10.4.custom.css">
 	<link rel="stylesheet" href="css/style.css?v=1">
-	<!-- end CSS-->
+
 	
 </head>
+
+
 <div id="wrapper">
-<body>
-	<header>
-		<h1>G-Corp</h1>
-	<div id="nav">
+	<body>
+	  <header>
+		<h1 class="app_name">Project Management <span class="green"> Made Easy</span> </h1>
+        
+	    <div id="nav">
+	    </div><!--close nav-->	
+        
+	  </header><!--close header-->
 
-	</div><!--close nav-->	
-	</header><!--close header-->
+	  <div id="content">
 
-	<div id="content">
+		<article class="reg_page">
+		  <h2>Registration Page...</h2>
+			<p>Please enter your First and Last Name.</p> 
 
-		<h2>Registration Page...</h2>
+			<p>Enter the e-mail address that you want to associate with this account.
+             <span class="green">(We value our customers privacy and We will never 
+             sell your information to third party businesses.)</span></p>
+
+			<p>Choose a username. <span class="green">A pop up will inform you if you 
+            need to choose another name if that name is already in use.</span></p>
+
+			<p>Choose a password.</p>
+			<p>When all fields are filled succesfully you will be able to login to 
+            the application and begin creating projects.</p>
+
+		</article>
+
+
+	    <div id="reg">
 		
-
-	<div id="reg">
-		
-		<!--this is the registration form to join hte site-->
-		<form id="register"><!--create form below-->
-			<label>First Name:</label>
-			<br>
-			<input id="first" 
+		    <!--this is the registration form to join the site-->
+		   <form id="register"><!--create form below-->
+        
+		   <div class="col">	
+			   <label>First Name:</label>
+			   <br>
+			   <input id="first" 
 			       type="text" 
 			       name="first-name" 
 			       class="masterTooltip" 
 				   title="enter name"
 			       placeholder="Enter your First Name">
-			<br>
+			  <br>
 
-			<label>Last Name:</label>
-			<br>
-			<input id="last" 
+			  <label>Last Name:</label>
+			  <br>
+			  <input id="last" 
 				   type="text" 
 				   name="last-name" 
 				   class="masterTooltip" 
 				   title="enter name"
 				   placeholder="Enter your Last Name" 
-				   required>  
-			<br>
+				   required >  
+			  <br>
 
-			<label>Email Address:</label>
-			<br>
-			<input id="email"  
+			 <label>Email Address:</label>
+			 <br>
+			 <input id="email"  
 				   name="email" 
 				   class="masterTooltip" 
 				   title="enter email address"
-				   placeholder="Enter your Email Address" required>
-			<br>
-		
+				   placeholder="Enter your Email Address" required >
+			 <br>
+	
 
-		<div id="col2">	
+	
 			<label>User Name:</label>
 			<br>
 			<input id="userName" 
@@ -90,26 +112,29 @@
 			<br>
 			<input id="password"  
 			       name="password" 
-			       placeholder="Enter your password" required>
+			       placeholder="Enter your password" required >
 			<br>
 			<br>
 		</form>
 		
-		<!--submit button for registration form-->
-		<input   id="submit" 
-		         name="submitbtn" 
-		         type="button" 
-		         value="Submit"/> 
-		</div><!--close col2-->
+		  <!--submit button for registration form-->
+		  <input   id="submit" 
+		           name="submitbtn" 
+		           type="button" 
+		           value="Submit" > 
 
-	</div><!--close-->
-	
-	</div><!--add close containter-->
-	</div><!--close wrapper-->	
+		 </div><!--close-col-->
+
+	    </div><!--close-reg div at top-->
+	</div><!--close containter-->
+</div><!--close wrapper-->	
+    
 	<!-- jquery --><!--using google apis -->
+<!-- jquery --><!--using google apis -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script ttype="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<!-- plugins -->
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

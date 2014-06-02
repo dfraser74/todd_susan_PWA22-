@@ -23,14 +23,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- CSS concatenated and minified via ant build script-->
+	<!--custom css loaded first-->
+	<link rel="stylesheet" href="css/trontastic/jquery-ui-1.10.4.custom.css">
 	<link rel="stylesheet" href="css/style.css?v=1">
-	<!-- end CSS-->
+
 	
 </head>
 <div id="wrapper">
 <body>
 <header>
-	<h1>G-Corp</h1>
+	<h1 class="app_name">Project Management <span class="green"> Made Easy</span> </h1>
 	<div id="nav">
 	</div>
 </header><!--close header-->
@@ -56,15 +58,35 @@
 			  id="dashboardButton" 
 			  value="Dashboard" />
 	</p>	
+
+
+	
+
 	</aside>
 
 
 	<div class="welcome">
+	<h2>NEW PROJECTS</h2>	
+	<p>Click Button to make a new procject.A modal window will pop up allowing the user to create a new project. When the ADD button on the modal is clicked the user is taken to the add.html page. This procedure does not seem efficiant to me. I think after the modal button is clicked the user should be directed back to the projects page to see all of their projects. It seems silly to first create the project in the modal window and then be directed to the add.html page to create the same project again. </p>
 
-	<p>Click Button to make a new procject.</p>
+	<p>I feel like there is something that I missed in the whole process here but not sure what it is. I have reviewd all the videos and refrenced the book. Still lost about all the add buttons.</p>
 
+		<!--commented out the button leading directly to the add.html page-->
+
+		
 		<!--add modal window here-->
 	 <p><a href="#" class="modalClick"><img src="images/add_this.png"  width="45" height="45" border="0"  alt="Logo of company"></a></p> <!--corrected href #-->
+
+
+	 <p><input name="myButton" 
+			  type="button" 
+			  class="masterTooltip" 
+			  title="click to go to Add Page"
+			  id="myButton" 
+			  value="Add Page" />
+	</p>	
+
+
 
 	
 	</div><!--close welcome div-->
@@ -80,8 +102,13 @@
 
 	</div><!--close projectlist div-->
 	  
-	<div class="projects"></div>
+
+			<!--must add the ui classes and ids to the html sections so that the css will be applied-->
+			<!--sortable is part of jquery ui-->
+	<div class="projects" id="sortable"></div>
+
 		<!--projects will be placed in this empty div-->
+		
 	</div><!--close projectlists-->
 
 
@@ -98,6 +125,12 @@
 	<form id="addForm"><!--create form below-->
 
 			<!--code for the 3 form fields of the project-->
+			<label>Project ID:</label>
+			<input name="projectID"
+			       id="projectID" 
+			       type="text"/>
+			       <br>
+	
 			<label>Project Name:</label>
 			<input name="projectName"
 			       id="projectName" 
@@ -113,10 +146,11 @@
 			<label>Project Due Date:</label>
 			<input name="projectDueDate"
 			       id="projectDueDate" 
+			       class="mydatepicker"
 			       type="text"/>
 			       <br>
 					 <br>
-
+					 <!--adding class   mydatepicker to duedate to get the calandar when clicking on the input box-->
 	<!--status of project-->      
      
 			<label name="status"> Select Project Status </label>
@@ -127,6 +161,7 @@
 				<input type="radio"
 				       name="status"
 				       id= "urgent"  
+				       class="selectable"
 				       class="masterTooltip" 
 				       title="click on status button">
 				   <img src="images/coffee3.png" width="69" hight="75"/>
@@ -136,6 +171,7 @@
 				<input type="radio"
 				       name="status"
 				       id="normal"
+				       class="selectable"
 				       class="masterTooltip" 
 				       title="click on status button">
 				   <img src="images/coffee3.png" width="69" hight="75"/>
@@ -144,6 +180,7 @@
 			<label class="mystatus">
 				<input type="radio"
 				       name="status" 
+				       class="selectable"
 				       id="delayed"  >
 				 <img src="images/coffee3.png" width="69" hight="75"/>
 			</label>
@@ -151,12 +188,15 @@
 			<label class="mystatus">
 				<input type="radio"
 				       name="status"
+				        class="selectable"
 				       id="complete" >
 				   <img src="images/coffee3.png" width="69" hight="75"/>
 			</label>
 	<br>
 	<br>
 	<!-- addButton-===================add the project to the projects page-->
+			<!--originally named the addButton -->
+			<!--new name should take me to projects.html not add.html--> 
 	 		<input name="addButton" 
 			       type="button" 
 			       id="addButton" 
@@ -176,11 +216,12 @@
 
 	<!-- jquery --><!--using google apis -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script ttype="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<!-- plugins -->
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
-  
+	
 </body>
 </html>
 

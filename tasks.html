@@ -23,14 +23,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
 	<!-- CSS concatenated and minified via ant build script-->
+	<!--custom css loaded first-->
+	<link rel="stylesheet" href="css/trontastic/jquery-ui-1.10.4.custom.css">
 	<link rel="stylesheet" href="css/style.css?v=1">
-	<!-- end CSS-->
+
 	
 </head>
 <div id="wrapper">
 <body>
-<header>
-	<h1>G-Corp</h1>
+<header><h1 class="app_name">Project Management <span class="green"> Made Easy</span> </h1>
 	<div id="nav">
 	</div>
 </header><!--close header-->
@@ -77,8 +78,11 @@
     <br>
     <p><img src="images/cdrom.png"  width="100" height="90" alt="Logo of company"></p>
 
-	<div id="note">
-	   <h2>Note:</h2>
+	<div id="draggable" class="ui"-widget-content">
+
+		<p> Drag the tasks to the trash when completed. </p>
+
+	   <h2>Draggable Taskes:</h2>
 	   <h3>To Do List </h3>
 	   <ul>
 	   		<li>dash btn</li>
@@ -87,15 +91,17 @@
 	   		<li>header</li>
 	   		
 	   </ul>
-	</div><!--close Note div-->
+	</div><!--close draggable div-->
 
 	</div><!--close content-->
 	</div><!--close wrapper-->	
-	<!-- jquery --><!--script tags go in this area-->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-	<!-- plugins -->
 	
+	<!-- jquery --><!--script tags go in this area-->
+	<!-- jquery --><!--using google apis -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script ttype="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<!-- plugins -->
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

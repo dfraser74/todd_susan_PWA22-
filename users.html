@@ -1,4 +1,4 @@
- <!--Susan Todd 5-5-2014,Project Management  App, PWA-2  | add.html -->
+ <!--Susan Todd 5-5-2014,Project Management  App, PWA-2 | usershtml-->
 
  <!doctype html>  
 
@@ -10,12 +10,13 @@
 <html lang="en">
 <head>
 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	
-	<meta http-equiv="Content Type" content="text/html" charset="utf-8"/>
-	
-	<title>My App|Add a Project </title>
-	
-	<!--adding a favicon to browser page-->
+	<title>My App|Home|Login</title>
+	<meta name="description" content="">
+	<meta name="author" content="">
+
 	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
 	
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
@@ -26,23 +27,19 @@
 	<link rel="stylesheet" href="css/trontastic/jquery-ui-1.10.4.custom.css">
 	<link rel="stylesheet" href="css/style.css?v=1">
 
-
-
-	<!-- end CSS-->
 	
 </head>
-<div id="wrapper">
+
 <body>
+<div id="wrapper">	
 <header>
-	<h1 class="app_name">Project Management <span class="green"> for Teachers</span> </h1>
+	<h1 class="app_name">Project Management <span class="green"> Made Easy</span> </h1>
 	<div id="nav">
 	</div>
 </header><!--close header-->
 
 
 <aside>
-
-	
 	<div class="userid">Welcome User:</div><!--close div-->
 
 	<div class="logoutbox">
@@ -63,54 +60,47 @@
 			  id="dashboardButton" 
 			  value="Dashboard" />
 	</p>	
-</aside>
+	</aside>
 
-<div id="content">
+	<div id="content">
+
+	<div id="friend"><!--login mod-->
+
+		<h3>Contact Friends</h3>
+
+	</div><!--close freind-->
+
+	<h2>Users...</h2>
+	<h3>Project Management</h3>
+	<p>Connect with other teachers:</p>
 	
+    <p><img src="images/phone.png"  width="100" height="90" alt="Logo of company"></p>
+    <br>
+    <br>
+    <p><img src="images/chat.png"  width="100" height="90" alt="Logo of company"></p>
 
-	<h2>Add Project...</h2>
+	<div id="note">
+	   <h2>Users:</h2>
+	   <h3>List of users and passwords to test for:</h3>
+	   	<ul>
+	   		<li>Peter Rabbit:prabbit/prabbit</li>
+	   		<li>Buggs Bunny:bbunny/123</li>
+	   		<li>Susan Todd:stodd/123</li>
+	   		<li>student:password</li>
+	   		<li></li>
+	   		<li></li>
+	   		
 
-	<div id="add">
-    
-			<form id="addForm">
-				<label>Project Name:</label>
-				<input name="projectName" 
-						type="text"
-						id="projectName"/><br>
+	    </ul>
+	</div><!--close note div-->
 
-			
-				<label>Project Description:</label>
-				<input name="projectName" 
-						type="text"
-						id="projectDescription"/><br>
-
-
-				<label>Project Due Date:</label>
-				<input name="projectName" 
-						type="text"
-						class="mydatepicker"
-						id="projectDueDate"/><br>
-
-
-				<label>Project Status:</label>
-				<input name="projectStatus" 
-						type="text"
-						id="projectStatus"/><br>
-
-
-				<input name="addBtn" 
-						type="button"
-						id="addBtn"
-						value="Add"/><br>
-
-	</div><!--close add-->					
 </div><!--close content-->
-</div><!--close wrapper-->
+</div><!--close wrapper-->	
 
 
-	<!-- jquery --><!--script tags go in this area-->
+	<!-- jquery --><!--using google apis -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script ttype="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<!-- plugins -->
 	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 	<!-- main -->

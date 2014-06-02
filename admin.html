@@ -22,22 +22,29 @@
 	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	
+	
 	<!-- CSS concatenated and minified via ant build script-->
+	<!--custom css loaded first-->
+	<link rel="stylesheet" href="css/trontastic/jquery-ui-1.10.4.custom.css">
 	<link rel="stylesheet" href="css/style.css?v=1">
+
+
 	<!-- end CSS-->
 	
 </head>
 <div id="wrapper">
 <body>
 <header>
-	<h1>G-Corp</h1>
+	<h1 class="app_name">Project Management <span class="green"> Made Easy</span> </h1>
 	<div id="nav">
 	</div>
 </header><!--close header-->
 
 
 <aside><!--container for buttons-->
-	<div class="userid">Welcome User:</div><!--close div-->
+	<!--div for the userid function uses the check_login php page-->
+	<div class="userid">Welcome User:
+	</div><!--close div-->
 
 	<div class="logoutbox">
 	   	<input name="logOut"
@@ -70,56 +77,66 @@
 	</div><!--close dash/admin div-->
 
 <!--=====+++====accordian code====+++===-->
-
+<!--this is the accordian panel-->
+<!--class my tabs will have a sise of 750px-->
 <div class="mytabs">
 
-	<ul class="tabs">
+	<ul  id="tabs" class="tabs">
 
 		<li><a href= "#tab1" >Projects</a></li>
 		<li><a href= "#tab2" >Tasks</a></li>
 		<li><a href= "#tab3" >Users</a></li>
 
-	</ul>
+	</ul><!--close tabs-->
 
 	<!--code for 3 tabs-->
-	<div id="tab1">
+	<div id='tab1'>
+
 		<h3>Projects</h3>
 		<p>Go to My Projects Page(Tab)...
-			<button class="projectsbtn" > Projects </button></p>
+			You can manage your projects on this page</p>
+
+		<p>	<button class="projectsbtn" > Projects </button></p>
 	</div><!--close tab1 div-->
 
-	<div id="tab2">
+	<div id='tab2'>
+
 		<h3>Tasks</h3>
-		<p>Go to My Tasks Page...
-			<button class="taskbtn" > Tasks </button></p>
+		<p>Go to My Tasks Page...,<br>
+			You can create specific tasks on this page.</p>
+
+		<p>	<button class="taskbtn" > Tasks </button></p>
 	</div><!--close tab2 div-->
 
-	<div id="tab3">
+	<div id='tab3'>
+
 		<h3>Users</h3>
-		<p>See Users Page...
-			<button class="usersbtn" > Users </button></p>
+		<p>See Users Page...,<br>
+			The users page will allow you to connect with other teachers.</p>
+
+			<p><button class="usersbtn" > Users </button></p>
 			
-	</div><!--close  3 tabs div-->
+	
 </div><!--close mytabs div-->
-
-	<br>
-	<br>
-
 	<!--end accordian-->
 
-	<div id="gallery">
+</div><!--close content-->
+
+
+
+     <div id="gallery">
 		<h2>Gallery </h2>
 			<p>If time allows use a gallery here.</p>
 			<p>Choose project pic.</p>
 	</div><!--gallery close-->
 
-</div><!--close content-->
-
 </div><!--close wrapper-->
+
 	<!-- jquery --><!--using google apis -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script ttype="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 	<!-- plugins -->
+	<script type="text/javascript" src="js/jquery-ui-1.10.4.custom.js"></script>
 	<!-- main -->
 	<script type="text/javascript" src="js/main.js"></script>
   

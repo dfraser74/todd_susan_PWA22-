@@ -5,14 +5,11 @@
  style.css
  */
  /*Colors
-
 lt slate-- gray#708090
 dk grey-- #A9a9a9
 lt blue--#add8e6
 lt steel blue--#b0c4de
 wht smoke-#f5f5f5
-
-
 olive-grey-background-color-#ABA597
 base white-#edf2ee
 lt taupe-#B4A085
@@ -23,7 +20,6 @@ green hover-#A1AC60
 lt rust hover-#f49440
 rust-CTA-#CC6633
 drk rust -#CC6633
-
 drk olive-#003300 
 
  */
@@ -39,7 +35,7 @@ body{
 	
 	background-color: #ABA597;//olive-grey
 	font-family: Verdana, Arial, sans-serif;
-	font-size:1em;
+	font-size:1.1em;
 	color: #45341b;/*chocolate*/
 }
 /*Header*/
@@ -68,11 +64,36 @@ header{
 aside{
 	
 	 width: 150px;
-     font-size: 13px;
-     padding: 1px 1px 1px;
+     font-size:15px;
+     padding: 1px 4px 4px;
      float:right;
+
     
- }   
+ }
+
+article{
+ 	float:left;
+ 	width:350px;
+ } 
+
+.app_name{
+	color:#CC6633;
+	font-weight:bolder;
+	font-style: italic;
+	float:right;
+	margin:40px;
+	padding-top: 30px;
+} 
+
+.reg_page{
+ 	width:425px;
+ 	padding-right: 20px;
+ }
+
+#imageBlock{
+	width:150px;
+	padding-bottom: 10px;
+}   
 
 .userid{
 	width:760px;
@@ -97,8 +118,10 @@ aside{
 	font-size:12px Arial;
 }
 
-/*Tabs- for accrodian*/
+/*Tabs- for accordian*/
+/* mytabs creates the light grey backround box to hold all the projects*/
 .mytabs{
+	/*width:800px;*/
 	width:760px;
 	background-color:#CCC; /*grey*/
 	padding:20px;
@@ -124,28 +147,32 @@ aside{
 	
 } 
 
-/*-------Links-----------------------
-
 /*_____headings-----------------------*/
 h1{color:#FFF;}/*white*/
 
 h2{
 	color:#45341b;/*chocolate brown*/
-	/*font-size: 4em ;*/
+	font-size: 1.6em ;
  }
+
 h3{
  	color:#54780e;/*green*/
  	/*color:#cb7f28;orange*/
 } 
 .green{
 		color:#54780e;/*green*/
+		font-style: italic;
 
 }
 span{
 	color:#cb7f28;
 	font-weight: bolder;
 }
-h4{color:#cb7f28;}/*orange*/
+
+h4{
+	color:#cb7f28;
+}/*orange*/
+
 p{ 
   	word-wrap:break-word;
 }
@@ -173,18 +200,14 @@ p{
 	
 }
 #reg{
-	display:inline-block;
-	float:right;
-}
-#col1{
-	display:block;
-	display:left;
-}
-#col2{
+
+	width:325px;
 	display:block;
 	float:right;
-	
-	
+	border-left: 1px solid  green;
+    border-width: 3px;
+    padding-left: 10px;
+
 }
 
 /*-------modal-----------------------*/
@@ -213,14 +236,17 @@ p{
 	z-index:1001;/*ipx over the top of the overlay */
 	display:none;
 }
+
 #modal .header{
 	background-color: #333;
 	color:#FFF;
 	padding:10px;
 }
+
 #modal p{
 	margin:15px;
 }
+
 #modal .close{
 	position: absolute;
 	right:5px;
@@ -232,9 +258,11 @@ p{
 	cursor: pointer;
 	background-color: #F00;
 }
+
 form{
 	padding:10px;
 }
+
 form input{
 	padding:10px;	
 }
@@ -242,12 +270,38 @@ form input{
 .mystatus > input[type=radio]{
 	display: none;
 }
+
 .input[type=radio] + img {
 	cursor:pointer;
 	border: 2px solid transparent;
 }
+
 input[type=radio]:checked + img{
 	border:2px solid #F00;
+}
+
+.projects{
+	font-size:12px;
+	color:#FFF;
+}
+
+/*========Jquery UI Sortable for Projects====================*/
+#sortable { list-style-type: none; margin: 0; padding: 10px; width: 98%; }
+#sortable li { margin: 0 3px 3px 3px; padding: 0.8em; padding-left: 1.5em; font-size: 1em; height: 90px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+
+
+#draggable{ width:100px;
+			height:100px;
+			padding:0.5em;
+}
+#droppable{
+	        width:150px;
+			height:150px;
+			padding:0.5em;
+			float:left;
+			margin: 10px ; 
+
 }
 
 
